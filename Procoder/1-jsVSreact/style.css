@@ -1,0 +1,29 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;          /* vertically center everything */
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+button {
+    background: none;             /* remove default button bg */
+    border: none;                 /* remove default border */
+    cursor: pointer;              /* pointer on hover */
+}
+
+button:active {
+    transform: scale(0.95);       /* click feedback */
+}
+
+img {
+    width: 50px;                  /* arrow size */
+    height: 50px;
+    object-fit: contain;          /* keep image ratio */
+    transition: transform 0.2s;   /* smooth hover */
+}
+
+button:hover img {
+    transform: scale(1.1);        /* zoom on hover */
+}
