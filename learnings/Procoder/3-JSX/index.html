@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React via CDN</title>
+</head>
+<body>
+
+    <!-- Root element where React will render UI -->
+    <div id="root"></div>
+
+    <!-- ================= React CDN ================= -->
+    <!-- React: UI elements / objects create karta hai -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- ReactDOM: React ke elements ko browser DOM mein render karta hai -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- ================= Babel CDN ================= -->
+    <!-- Babel JSX ko JavaScript mein convert karta hai -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- ================= JSX Script ================= -->
+    <!-- type="text/babel" batata hai ki is file mein JSX likha hai -->
+    <script type="text/babel" src="3-script.jsx"></script>
+
+</body>
+</html>
