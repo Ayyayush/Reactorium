@@ -1,23 +1,38 @@
 {
   "name": "reactorium",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000R\u0000e\u0000a\u0000c\u0000t\u0000o\u0000r\u0000i\u0000u\u0000m\u0000\r\u0000 \u0000",
+  "description": "Learning React, JSX, and Babel from scratch",
   "main": "index.js",
+  "type": "commonjs",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel learnings --out-dir dist",
+    "watch": "babel learnings --out-dir dist --watch",
+    "test": "echo \"No tests added yet\""
   },
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ayyayush/Reactorium.git"
+    "url": "https://github.com/Ayyayush/Reactorium.git"
   },
-  "keywords": [],
-  "author": "",
+
+  "keywords": [
+    "react",
+    "jsx",
+    "babel",
+    "learning",
+    "frontend"
+  ],
+
+  "author": "Ayush Pandey",
   "license": "ISC",
-  "type": "commonjs",
+
   "bugs": {
     "url": "https://github.com/Ayyayush/Reactorium/issues"
   },
+
   "homepage": "https://github.com/Ayyayush/Reactorium#readme",
+
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",
