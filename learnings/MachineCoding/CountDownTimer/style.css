@@ -7,6 +7,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 /* Main Timer Container */
 .timer {
     padding: 20px;
@@ -16,6 +17,7 @@ body {
     text-align: center;
     width: 300px;
 }
+
 
 /* Inputs */
 .timer__inputs {
@@ -30,6 +32,8 @@ body {
     padding: 6px;
     text-align: center;
 }
+
+
 
 /* Display */
 .timer__display {
