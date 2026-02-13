@@ -4,18 +4,15 @@
   "description": "Learning React, JSX, and Babel from scratch",
   "main": "index.js",
   "type": "commonjs",
-
   "scripts": {
     "build": "babel learnings --out-dir dist",
     "watch": "babel learnings --out-dir dist --watch",
     "test": "echo \"No tests added yet\""
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/Ayyayush/Reactorium.git"
   },
-
   "keywords": [
     "react",
     "jsx",
@@ -23,20 +20,20 @@
     "learning",
     "frontend"
   ],
-
   "author": "Ayush Pandey",
   "license": "ISC",
-
   "bugs": {
     "url": "https://github.com/Ayyayush/Reactorium/issues"
   },
-
   "homepage": "https://github.com/Ayyayush/Reactorium#readme",
-
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.0",
     "@babel/preset-react": "^7.28.5"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }
