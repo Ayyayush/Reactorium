@@ -1,0 +1,34 @@
+/* 
+ * Ye CSS GLOBAL nahi hai
+ * Ye sirf AppleBasket component pe apply hogi
+ */
+
+.basket {
+  border: 2px solid #ff4d4d;
+  padding: 16px;
+  width: 200px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff7f7;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.count {
+  font-weight: bold;
+  color: #ff1a1a;
+}
+
+.name {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Basket full hone par extra style */
+.full {
+  color: green;
+  font-weight: bold;
+}
