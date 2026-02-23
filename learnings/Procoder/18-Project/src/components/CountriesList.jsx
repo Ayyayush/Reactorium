@@ -1,26 +1,21 @@
-import React from "react";
-import countriesData from "../countriesData";
-import CountryCard from "./CountriesCard";
+import React from "react"
+import CountryCard from "./CountriesCard"
 
-const CountriesList = () => {
+const CountriesList = ({ countries }) => {
   return (
-    <>
-      <div className="countries-container">
-        {countriesData.map((country) => {
-          return (
-            <CountryCard
-              key={country.name.common}
-              name={country.name.common}
-              flag={country.flags.svg}
-              population={country.population}
-              region={country.region}
-              capital={country.capital?.[0]}
-            />
-          );
-        })}
-      </div>
-    </>
-  );
-};
+    <div className="countries-container">
+      {countries.map((country) => (
+        <CountryCard
+          key={country.name.common}
+          name={country.name.common}
+          flag={country.flags.svg}
+          population={country.population}
+          region={country.region}
+          capital={country.capital?.[0]}
+        />
+      ))}
+    </div>
+  )
+}
 
-export default CountriesList;
+export default CountriesList
