@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import CountryCard from './CountriesCard'
 
 export default function CountriesList({ query }) {
@@ -6,51 +6,53 @@ export default function CountriesList({ query }) {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    // Runs only once when component mounts (empty dependency array)
-
-    // Fetch all countries data from REST Countries API
-    fetch('https://restcountries.com/v3.1/all')
-      .then((res) => res.json())                     // Convert response to JSON
+    fetch(
+      'https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital'
+    )
+      .then((res) => res.json())
       .then((data) => {
-        setCountriesData(data)                       // Store API data in state
+        if (Array.isArray(data)) {
+          setCountriesData(data)
+        } else {
+          setCountriesData([])
+        }
+      })
+      .catch(() => {
+        setCountriesData([])
       })
 
-    // Create an interval that runs every 1 second
     const intervalId = setInterval(() => {
-      console.log('running countriesList component')
+      console.log('CountriesList is mounted')
     }, 1000)
 
-    // Cleanup function: runs when component unmounts
     return () => {
-      clearInterval(intervalId)                      // Clear interval to prevent memory leak
+      clearInterval(intervalId)
+      console.log('CountriesList unmounted')
     }
   }, [])
 
   useEffect(() => {
-    // Runs every time `count` state changes
-    console.log('hiii')
+    console.log('Count changed:', count)
   }, [count])
+
+  const filteredCountries = countriesData.filter((country) =>
+    country.name.common.toLowerCase().includes(query.toLowerCase())
+  )
 
   return (
     <>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>Increase Count</button>
-
+     
       <div className="countries-container">
-        {countriesData
-          .filter((country) =>
-            country.name.common.toLowerCase().includes(query)
-          )
-          .map((country) => (
-            <CountryCard
-              key={country.name.common}
-              name={country.name.common}
-              flag={country.flags.svg}
-              population={country.population}
-              region={country.region}
-              capital={country.capital?.[0]}
-            />
-          ))}
+        {filteredCountries.map((country) => (
+          <CountryCard
+            key={country.name.common}
+            name={country.name.common}
+            flag={country.flags.svg}
+            population={country.population}
+            region={country.region}
+            capital={country.capital?.[0]}
+          />
+        ))}
       </div>
     </>
   )

@@ -8,6 +8,7 @@ export default function CountriesList({ query }) {
   useEffect(() => {
     // Runs only once when component mounts (empty dependency array)
 
+   
     // Fetch all countries data from REST Countries API
     fetch('https://restcountries.com/v3.1/all')
       .then((res) => res.json())                     // Convert response to JSON
