@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CountryCard from './CountriesCard'
+import CountryCard from './CountryCard'
 
 export default function CountriesList({ query }) {
   const [countriesData, setCountriesData] = useState([])
