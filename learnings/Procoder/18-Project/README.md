@@ -1,16 +1,120 @@
-# React + Vite
+# 🌍 Where in the World?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React Single Page Application (SPA)** that displays country data using the REST Countries API.
 
-Currently, two official plugins are available:
+Users can search, filter by region, and view detailed country information with smooth client-side routing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔍 Search countries by name
+- 🌎 Filter countries by region
+- 📄 View detailed country information
+- 🔁 Client-side routing using React Router
+- ⚡ Fast SPA navigation (no page reload)
+- 🧠 Demonstrates component mounting & unmounting
+- 🌙 Dark mode support (if implemented)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- React
+- React Router DOM
+- Vite
+- REST Countries API
+- CSS
+
+---
+
+## 📂 Project Structure
+src/
+├── components/
+│ ├── Header.jsx
+│ ├── Home.jsx
+│ ├── CountriesList.jsx
+│ ├── CountriesCard.jsx
+│ ├── CountryDetail.jsx
+│ ├── SearchBar.jsx
+│ ├── SelectMenu.jsx
+│ └── Error.jsx
+│
+├── App.jsx
+├── main.jsx
+└── App.css
+
+
+
+---
+
+## 🧠 Concepts Covered
+
+### React Fundamentals
+- Functional Components
+- Props
+- useState
+- useEffect
+- Conditional Rendering
+- Component Lifecycle
+
+### React Router
+- createBrowserRouter
+- RouterProvider
+- Outlet
+- Link
+- useParams
+- useNavigate
+- Dynamic Routing (`/country/:name`)
+- Error Boundary Route
+
+### API Handling
+- Fetch API
+- Data transformation
+- Defensive programming
+- Loading state handling
+
+---
+
+## 📡 API Endpoints Used
+
+Get all countries:
+
+
+
+
+---
+
+## 🧭 Routing Structure
+
+| Route | Component |
+|-------|------------|
+| `/` | Home |
+| `/contact` | Contact |
+| `/country/:name` | CountryDetail |
+| `*` | Error Page |
+
+---
+
+## 📌 Future Improvements
+
+- Add border country navigation
+- Add loading spinner
+- Add skeleton loading
+- Add better error UI
+- Add pagination
+- Add caching
+- Deploy to Netlify / Vercel
+
+---
+
+## 👨‍💻 Author
+
+Your Name  
+GitHub: https://github.com/your-username
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
